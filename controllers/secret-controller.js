@@ -57,6 +57,7 @@ exports.createSecret = (req, res, next) => {
     remainingViews: req.body.expireAfterViews
   });
   secret.save().then(result => {
+    console.log('SECRET_HASH: ' + result.hash);
       res.status(201).json({
         message: 'Secret created successfully!',
         secret: convertToSecretDto(result)
