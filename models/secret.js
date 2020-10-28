@@ -7,18 +7,18 @@ const secretSchema = new Schema(
       type: String,
       required: true
     },
-    author: {
-      type: String,
-      required: true
-    },
-    content: {
+    secretText: {
       type: Object,
       required: true
     },
-    expire: {
+    expiresAt: {
       type: Date,
       required: true
-    }
+    },
+    remainingViews: {
+      type: Number,
+      required: true
+    },
   },
   { timestamps: true }
 );
